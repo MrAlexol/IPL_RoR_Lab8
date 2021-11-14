@@ -5,7 +5,6 @@ class SequenceController < ApplicationController
   def input; end
 
   def view
-    begin
       @input = params[:values]&.split&.map { |el| Integer el }
       @error = 'Последовательность короче 10 чисел' if @input.length < 10
       find_increasing_subseq
@@ -13,7 +12,6 @@ class SequenceController < ApplicationController
       @error = 'Некорректный ввод'
     rescue NoMethodError
       @error = 'Последовательность не задана'
-    end
   end
 
   private
