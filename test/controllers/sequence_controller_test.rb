@@ -17,7 +17,7 @@ class SequenceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get view with error msg if not valid params supplied' do
-    get sequence_view_url, params: { values: '10' } 
+    get sequence_view_url, params: { values: '10' }
     assert_response :success
     assert_nil assigns[:result]
     assert_equal 'Последовательность короче 10 чисел', assigns[:error]

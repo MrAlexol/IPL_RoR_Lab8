@@ -17,7 +17,7 @@
             <% @result.each.with_index(1) do |subseq, ind| %>
                 <tr>
                     <th scope="row" class="col-1 text-center"><%= ind == @result.count ? 'Ответ' : ind %></td>
-                    <td><%= subseq.join(' ') %></td></tr>
+                    <td><%= subseq %></td></tr>
             <% end %>
         <tbody>
     </table>
